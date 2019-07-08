@@ -4,7 +4,7 @@ class Astronaut < ApplicationRecord
   has_many :missions, through: :astronaut_missions
 
   def self.average_age
-    average(:age)
+    self.average(:age)
   end
 
   def sorted_missions
